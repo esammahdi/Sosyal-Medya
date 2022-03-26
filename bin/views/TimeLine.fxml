@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import models.RippleButton?>
+<?import models.RippleLabel?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="1105.0" styleClass="body-background" stylesheets="@../resources/css/kullanici-ekrani.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TimeLineController">
+   <top>
+      <HBox prefHeight="38.0" prefWidth="698.0" spacing="10.0" styleClass="white-background" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/images/Facebook_64px.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="5.0" top="3.0" />
+               </HBox.margin>
+            </ImageView>
+            <RippleButton prefHeight="30.0" prefWidth="23.0" styleClass="search-button">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="search-button">
+                     <image>
+                        <Image url="@../resources/images/search_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </RippleButton>
+            <Pane prefHeight="41.0" prefWidth="77.0" HBox.hgrow="ALWAYS" />
+            <HBox prefHeight="30.0" prefWidth="217.0" spacing="15.0">
+               <children>
+                  <RippleLabel>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/home_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </RippleLabel>
+                  <RippleLabel onMouseClicked="#arkadaslarimMenusu">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/microsoft_people_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </RippleLabel>
+                  <RippleLabel>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/video_playlist_30px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </RippleLabel>
+                  <RippleLabel>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/facebook_gaming_24px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </RippleLabel>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+            <Pane prefHeight="41.0" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+            <RippleLabel layoutX="1069.0" layoutY="17.0" onMouseClicked="#bilgilerim" prefHeight="36.0" prefWidth="35.0">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" styleClass="search-button">
+                     <image>
+                        <Image url="@../resources/images/more_info_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+            </RippleLabel>
+            <RippleLabel onMouseClicked="#logout" prefHeight="31.0" prefWidth="35.0">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/logout_rounded_left_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="7.0" />
+               </HBox.margin>
+            </RippleLabel>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+      <ScrollPane prefHeight="475.0" prefWidth="223.0" style="-fx-background-color: transparent;" styleClass="scrollPane" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefWidth="189.0" spacing="5.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="63.0" prefWidth="156.0" spacing="10.0" styleClass="boxBackground">
+                     <children>
+                        <ImageView fx:id="kullaniciFotosuSide" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/user_48px.png" />
+                           </image>
+                        </ImageView>
+                        <RippleLabel fx:id="kullaniciAdiLabel" text="Esam Mahdi Bashir">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="14.0" />
+                           </font>
+                        </RippleLabel>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="63.0" prefWidth="156.0" spacing="10.0" styleClass="boxBackground">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/youtube_live_48px.png" />
+                           </image>
+                        </ImageView>
+                        <RippleLabel prefHeight="20.0" prefWidth="119.0" text="Live">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="14.0" />
+                           </font>
+                        </RippleLabel>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="63.0" prefWidth="156.0" spacing="10.0" styleClass="boxBackground">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/user_groups_50px.png" />
+                           </image>
+                        </ImageView>
+                        <RippleLabel prefHeight="20.0" prefWidth="119.0" text="Groups">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="14.0" />
+                           </font>
+                        </RippleLabel>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="63.0" prefWidth="156.0" spacing="10.0" styleClass="boxBackground">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/events_64px.png" />
+                           </image>
+                        </ImageView>
+                        <RippleLabel prefHeight="20.0" prefWidth="116.0" text="Events">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="14.0" />
+                           </font>
+                        </RippleLabel>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="63.0" prefWidth="156.0" spacing="10.0" styleClass="boxBackground">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/Play%20Games_64px.png" />
+                           </image>
+                        </ImageView>
+                        <RippleLabel prefHeight="20.0" prefWidth="115.0" text="Games">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="14.0" />
+                           </font>
+                        </RippleLabel>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="63.0" prefWidth="156.0" spacing="10.0" styleClass="boxBackground">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/facebook_gaming_48px.png" />
+                           </image>
+                        </ImageView>
+                        <RippleLabel prefHeight="20.0" prefWidth="115.0" text="Gaming Videos">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="14.0" />
+                           </font>
+                        </RippleLabel>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="63.0" prefWidth="156.0" spacing="10.0" styleClass="boxBackground">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/job_seeker_40px.png" />
+                           </image>
+                        </ImageView>
+                        <RippleLabel prefHeight="20.0" prefWidth="115.0" text="Jobs">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="14.0" />
+                           </font>
+                        </RippleLabel>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="63.0" prefWidth="156.0" spacing="10.0" styleClass="boxBackground">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/memories_24px.png" />
+                           </image>
+                        </ImageView>
+                        <RippleLabel prefHeight="20.0" prefWidth="115.0" text="Memories">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="14.0" />
+                           </font>
+                        </RippleLabel>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="63.0" prefWidth="156.0" spacing="10.0" styleClass="boxBackground">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/bookmark_64px.png" />
+                           </image>
+                        </ImageView>
+                        <RippleLabel prefHeight="20.0" prefWidth="115.0" text="Saved">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="14.0" />
+                           </font>
+                        </RippleLabel>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </left>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: transparent;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="566.0" prefWidth="25.0" style="-fx-border-color: transparent;" HBox.hgrow="ALWAYS" />
+            <ScrollPane style="-fx-border-color: transparent; -fx-background-color: transparent;">
+               <content>
+                  <VBox fx:id="postContainer" alignment="TOP_CENTER" prefWidth="598.0" spacing="20.0" style="-fx-border-color: transparent;" styleClass="body-background">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="137.0" prefWidth="419.0" spacing="15.0" styleClass="post-background">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="70.0" prefWidth="369.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fx:id="kullaniciFotosuOrta" fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/images/user.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="3.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <TextField fx:id="PostYazTextField" onAction="#postEkle" prefHeight="39.0" prefWidth="342.0" promptText="Esam,Bugun Ne Yapmayi Planliyorsun ?">
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="15.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </HBox>
+                              <Pane prefHeight="1.0" prefWidth="420.0" style="-fx-background-color: #F0F2F5;" />
+                              <HBox prefHeight="48.0" prefWidth="420.0">
+                                 <children>
+                                    <HBox prefHeight="48.0" prefWidth="93.0" spacing="5.0">
+                                       <children>
+                                          <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/images/youtube_live_48px.png" />
+                                             </image>
+                                          </ImageView>
+                                          <RippleLabel text="Live">
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </RippleLabel>
+                                       </children>
+                                    </HBox>
+                                    <Pane prefHeight="48.0" prefWidth="78.0" />
+                                    <HBox prefHeight="48.0" prefWidth="121.0" spacing="5.0">
+                                       <children>
+                                          <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/images/favorite_folder_48px.png" />
+                                             </image>
+                                          </ImageView>
+                                          <RippleLabel text="Fotos">
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </RippleLabel>
+                                       </children>
+                                    </HBox>
+                                    <Pane prefHeight="48.0" prefWidth="71.0" />
+                                    <HBox prefHeight="48.0" prefWidth="93.0" spacing="5.0">
+                                       <children>
+                                          <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/images/ic_wow.png" />
+                                             </image>
+                                          </ImageView>
+                                          <RippleLabel text="Feelings">
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </RippleLabel>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="8.0" top="8.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <Pane prefHeight="566.0" prefWidth="38.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </center>
+   <right>
+      <ScrollPane prefHeight="566.0" prefWidth="235.0" style="-fx-background-color: transparent;" styleClass="scrollPane" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="arkadasContainer" alignment="TOP_CENTER" prefHeight="105.0" prefWidth="234.0" spacing="10.0">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <children>
+                  <HBox alignment="CENTER_LEFT" maxWidth="220.0" prefHeight="53.0" prefWidth="179.0" styleClass="boxBackground">
+                     <children>
+                        <RippleLabel prefHeight="22.0" prefWidth="85.0" text="Arkadaslarim">
+                           <font>
+                              <Font name="Segoe UI Light" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </RippleLabel>
+                        <Pane prefHeight="53.0" prefWidth="97.0" />
+                        <RippleLabel onMouseClicked="#arkadaslarimMenusu" prefHeight="22.0" prefWidth="38.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/images/enter_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </RippleLabel>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </right>
+</BorderPane>

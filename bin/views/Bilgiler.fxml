@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import models.RippleButton?>
+<?import models.RippleLabel?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="600.0" styleClass="Apane" stylesheets="@../resources/css/bilgilerim.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BilgilerController">
+   <children>
+      <ImageView fx:id="foto" fitHeight="150.0" fitWidth="149.0" layoutX="29.0" layoutY="26.0" pickOnBounds="true" styleClass="imageView">
+         <image>
+            <Image url="@../resources/images/user.png" />
+         </image>
+      </ImageView>
+      <RippleLabel layoutX="227.0" layoutY="54.0" text="Ad" AnchorPane.bottomAnchor="363.0" AnchorPane.rightAnchor="358.0" AnchorPane.topAnchor="54.0" />
+      <RippleLabel layoutX="226.0" layoutY="93.0" text="Soyad" />
+      <RippleLabel layoutX="227.0" layoutY="168.0" text="Telefon Numarasi" />
+      <RippleLabel layoutX="227.0" layoutY="252.0" text="Dogum Tarihi" />
+      <RippleLabel layoutX="227.0" layoutY="286.0" text="Post Sayisi" />
+      <RippleLabel layoutX="226.0" layoutY="317.0" text="Arkadas Sayisi" />
+      <RippleLabel layoutX="227.0" layoutY="129.0" text="Kullanici Adi" />
+      <RippleLabel fx:id="postSayisi" layoutX="483.0" layoutY="286.0" text="45" />
+      <RippleLabel fx:id="arkadasSayisi" layoutX="483.0" layoutY="317.0" text="12" />
+      <DatePicker fx:id="dTarihi" disable="true" layoutX="422.0" layoutY="247.0" prefHeight="26.0" prefWidth="142.0" AnchorPane.bottomAnchor="161.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="247.0" />
+      <RippleButton fx:id="geri" layoutX="508.0" layoutY="375.0" mnemonicParsing="false" onAction="#geri" prefHeight="30.0" prefWidth="59.0" text="Geri" AnchorPane.bottomAnchor="29.0" />
+      <TextField fx:id="ad" disable="true" layoutX="418.0" layoutY="50.0" />
+      <TextField fx:id="soyad" disable="true" layoutX="418.0" layoutY="88.0" />
+      <TextField fx:id="KullaniciAd" disable="true" layoutX="418.0" layoutY="125.0" />
+      <TextField fx:id="telefon" disable="true" layoutX="418.0" layoutY="164.0" AnchorPane.bottomAnchor="245.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="164.0" />
+      <RippleLabel layoutX="227.0" layoutY="209.0" prefHeight="17.0" prefWidth="56.0" text="Cinsiyet" />
+      <RadioButton fx:id="erkek" disable="true" layoutX="427.0" layoutY="209.0" mnemonicParsing="false" text="Erkek" AnchorPane.bottomAnchor="208.0" AnchorPane.topAnchor="209.0">
+         <toggleGroup>
+            <ToggleGroup fx:id="Cinsiyet" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="kadin" disable="true" layoutX="508.0" layoutY="209.0" mnemonicParsing="false" text="Kadin" toggleGroup="$Cinsiyet" AnchorPane.bottomAnchor="208.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="209.0" />
+   </children>
+</AnchorPane>

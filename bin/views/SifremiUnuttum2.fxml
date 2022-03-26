@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import models.RippleButton?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="517.0" styleClass="anchor-pane" stylesheets="@../resources/css/sifreUnuttum.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SifreYenilemekController">
+   <children>
+      <Label layoutX="87.0" layoutY="161.0" text="Yeni Sifre" />
+      <Label layoutX="87.0" layoutY="217.0" text="Sifre Tekrari" />
+      <RippleButton layoutX="207.0" layoutY="271.0" mnemonicParsing="false" onAction="#sifreSifirla" text="Sifremi Sifirla" />
+      <TextField fx:id="yeniSifre" layoutX="196.0" layoutY="157.0" />
+      <TextField fx:id="yeniSifreTekrari" layoutX="196.0" layoutY="213.0" />
+      <RippleButton layoutX="14.0" layoutY="14.0" onAction="#geri" text="Geri" />
+   </children>
+</AnchorPane>

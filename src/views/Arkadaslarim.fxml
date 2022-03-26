@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import models.RippleButton?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="Apane" stylesheets="@../resources/css/arkadaslar.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ArkadaslarimController">
+   <children>
+      <TabPane layoutX="-6.0" prefHeight="400.0" prefWidth="606.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Arkadaslarim">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="25.0" text="Arkadaslar" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="25.0" />
+                        <TableView fx:id="ArkadasTablosu" layoutX="24.0" layoutY="68.0" prefHeight="227.0" prefWidth="560.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="68.0" />
+                        <RippleButton layoutX="557.0" layoutY="316.0" onAction="#Sil" text="Sil" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="14.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Arkadas Talepleri">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="25.0" text="Talepler" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="25.0" />
+                        <RippleButton layoutX="454.0" layoutY="316.0" onAction="#KabulEt" text="Kabul ET" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="84.0" />
+                        <RippleButton layoutX="530.0" layoutY="316.0" onAction="#ReddEt" text="Reddet" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="16.0" />
+                        <TableView fx:id="TalepTablosu" layoutX="24.0" layoutY="68.0" prefHeight="227.0" prefWidth="560.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="68.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Arkadas Ara">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="14.0" prefHeight="30.0" prefWidth="43.0" text="Ara" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="14.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Label>
+                        <TextField fx:id="KullaniciLabel" layoutX="24.0" layoutY="50.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="50.0" />
+                        <RippleButton layoutX="190.0" layoutY="50.0" onAction="#Ara" text="Ara" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="50.0" />
+                        <TableView fx:id="AramaTablosu" layoutX="24.0" layoutY="100.0" prefHeight="200.0" prefWidth="548.0" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="100.0" />
+                        <RippleButton layoutX="493.0" layoutY="325.0" onAction="#IstekGonder" text="Istek Gonder" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="23.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

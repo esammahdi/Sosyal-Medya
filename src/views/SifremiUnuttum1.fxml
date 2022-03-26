@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import models.RippleButton?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="599.0" styleClass="anchor-pane" stylesheets="@../resources/css/sifreUnuttum.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SifreController">
+   <children>
+      <TabPane layoutX="-1.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../resources/css/sifreUnuttum.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Normal">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchor-pane">
+                     <children>
+                        <TextField fx:id="KullaniciID" layoutX="185.0" layoutY="77.0" />
+                        <TextField fx:id="Ad" layoutX="185.0" layoutY="119.0" />
+                        <TextField fx:id="Soyad" layoutX="185.0" layoutY="161.0" />
+                        <Label layoutX="53.0" layoutY="81.0" text="Kullanici Adi" />
+                        <Label layoutX="53.0" layoutY="123.0" text="Ad" />
+                        <Label layoutX="53.0" layoutY="165.0" text="Soyadi" />
+                        <Label layoutX="53.0" layoutY="209.0" text="Dogum Tarihi" />
+                        <DatePicker fx:id="DogumTarihi" layoutX="184.0" layoutY="205.0" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: transparent;" />
+                        <RippleButton fx:id="sifreDegistirBtn" layoutX="184.0" layoutY="292.0" mnemonicParsing="false" onAction="#sifreDegistir" text="Sifremi Degistir" />
+                        <RippleButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#geri" text="Geri" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Admin">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchor-pane">
+                     <children>
+                        <TextField fx:id="adminID" layoutX="185.0" layoutY="77.0" />
+                        <TextField fx:id="adminAd" layoutX="185.0" layoutY="119.0" />
+                        <TextField fx:id="adminSoyad" layoutX="185.0" layoutY="161.0" />
+                        <Label layoutX="53.0" layoutY="81.0" text="Kullanici Adi" />
+                        <Label layoutX="53.0" layoutY="123.0" text="Ad" />
+                        <Label layoutX="53.0" layoutY="165.0" text="Soyadi" />
+                        <Label layoutX="53.0" layoutY="209.0" text="Dogum Tarihi" />
+                        <DatePicker fx:id="adminDogumTarihi" layoutX="184.0" layoutY="205.0" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: transparent;" />
+                        <RippleButton fx:id="adminSifreDegistirBtn" layoutX="185.0" layoutY="293.0" mnemonicParsing="false" onAction="#sifreDegistirAdmin" text="Sifremi Degistir" />
+                        <RippleButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#geri" text="Geri" />
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
