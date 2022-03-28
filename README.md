@@ -34,6 +34,10 @@ The second step is relatively easy, however, the first step may be a little long
 
 ### Downloading and configuring MSQL Server :
 
+<details>
+  <summary> Click to Expand </summary>
+
+
 1. From microsoft [website](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) download and install _SQL Server Express_.
 ![image](https://user-images.githubusercontent.com/95491137/160297335-dc3db6ab-aca3-4b44-96b9-12594f8bb696.png)
 
@@ -95,16 +99,30 @@ _Note : It may tell you need to restart the server, you can either restart your 
 <p align="center">
   <img align="center" src="images/tcpAll.png" alt="setting the IPALL port value to 1433"/>
 </p>
-
+ </details>
+ 
 ### <a name = "last" > Import and create the 'Sosyal Medya' database : </a>
 
-9. And lastly, import and create the 'Sosyal Medya' database from the [script](Database) provided in the Database folder. You can either execute the script directly or copy it then execute it.
+1. And lastly, import and create the 'Sosyal Medya' database from the [script](Database) provided in the Database folder. You can either execute the script directly or copy it then execute it.
 
-10.  At long last we are finished with setting up the server!!! Now you just need to change the login username and password in the [Start](Sosyal%20Medya/src/main/Start.java) java file to match the login you created :
+2.  At long last we are finished with setting up the server!!! Now you just need to change the login username and password in the [Start](Sosyal%20Medya/src/main/Start.java) java file to match the login you created :
 
 <p align="center">
   <img align="center" src="images/dbUserdbPassword.png"/>
 </p>
+
+ 
+ 
+<br>
+
+One last thing you must have already done if you are using JavaFX. Add VM Arguments to the project, as specified in the picture below (eclipse) :
+
+
+<p align="center">
+  <img align="center" src="images/runConfigurations.png"/>
+</p>
+
+> --module-path "C:\Program Files\Java\javafx-sdk-17.0.1\lib" --add-modules javafx.graphics,javafx.base,javafx.controls,javafx.fxml,javafx.web
 
 At this point you should have no problem running the project.
 
@@ -121,7 +139,11 @@ The program offers various features to try:
 
 
 2. **Posting :**
+When you click on 'What are your thoughts today' box in the timeline, a window that you can write a text into and add an image appears :
 
+ <p align="center">
+  <img align="center" src="images/postBox.png"/>
+</p>
 
 3. **Adding/Deleting friends :**
 
@@ -167,7 +189,9 @@ The messaging box UI has largely been taken from [![](https://img.shields.io/you
 **CSS :**
 
 [Nonameplum](https://github.com/nonameplum)'s [![](https://img.shields.io/github/stars/nonameplum/md-button-fx-sample?label=md-button-fx-sample&style=social)](https://github.com/nonameplum/md-button-fx-sample) css was used to give the buttons a modern look.\
-_<sub>There was also another source that I used to make the side scrollers look modern</sub>_
+
+_<sub>There was also another source that I used to make the side scrollers look modern</sub>_\
+_<sub>The Ripple Animation was also taken from another site that I do not remember at the moment</sub>_
 
 **Icons** : 
 
