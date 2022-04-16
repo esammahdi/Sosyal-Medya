@@ -1,7 +1,7 @@
 # Sosyal-Medya
 A simple facebook-like social media project that has simple functions such as  adding/deleting friends, text/photo sharing and messaging. Under the hood, it has an MVC arcitecture pattern and uses JavaFX and MSQL Server.
 
-[![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgray.svg?style=flat-square)](https://creativecommons.org/licenses/by/4.0/)
+[![License](https://img.shields.io/badge/License-MIT-lightgray.svg?style=flat-square)](https://creativecommons.org/licenses/by/4.0/)
 [![Latest release](http://img.shields.io/badge/beta-0.1.0-blue.svg?style=flat-square)](./)
 
 Table of contents
@@ -160,7 +160,7 @@ Known issues and limitations
 License
 -------
 
-This program is distributed under the terms of the [Creative Commons BY 4.0 license (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).  The license applies to this file and other files in the [GitHub repository](https://github.com/esammahdi/Processing/edit/main/Terrain%20Generator/) hosting this file.
+This program is distributed under the terms of the [MIT License (MIT)](https://creativecommons.org/licenses/by/4.0/).  The license applies to this file and other files in the [GitHub repository](https://github.com/esammahdi/Processing/edit/main/Terrain%20Generator/) hosting this file.
 
 
 Authors and history
